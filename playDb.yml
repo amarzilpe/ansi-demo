@@ -2,5 +2,5 @@
   hosts: database_server
   become: yes
   become_method: sudo
-  role: 
+  roles: 
       - db.yml
