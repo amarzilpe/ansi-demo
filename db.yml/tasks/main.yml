@@ -3,14 +3,14 @@
 - name: Update all dependency packages
   command: sudo yum update -y
 
-# - name: installation of mariadb database server
-#   command: cat <<EOF> /etc/yum.repos.d/MariaDB.repo
-#           [MariaDB]
-#           name = MariaDB
-#           baseurl = http://yum.mariadb.org/10.1/centos7-amd64
-#           gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-#           gpgcheck=1
-#           EOF
+- name: installation of mariadb database server
+  shell: echo 
+          "[MariaDB]
+          name = MariaDB
+          baseurl = http://yum.mariadb.org/10.1/centos7-amd64
+          gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+          gpgcheck=1" >  /etc/yum.repos.d/MariaDB.repo
+          
         
 - name: Install mariadb database
   yum: 
