@@ -2,13 +2,13 @@
   hosts: web_server
   become: yes
   become_method: sudo
-  role: 
+  roles: 
       - web.yml
 
 - name: Database server installation
   hosts: database_server
   become: yes
   become_method: sudo
-  role: 
+  roles: 
       - db.yml
               
