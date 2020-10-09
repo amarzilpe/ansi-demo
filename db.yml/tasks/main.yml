@@ -5,35 +5,35 @@
   async: 180
   poll: 60
 
-- name: installation of mariadb database server
-  shell: echo 
-          "[MariaDB]
-          name = MariaDB
-          baseurl = http://yum.mariadb.org/10.1/centos7-amd64
-          gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-          gpgcheck=1" >  /etc/yum.repos.d/MariaDB.repo
+# - name: installation of mariadb database server
+#   shell: echo 
+#           "[MariaDB]
+#           name = MariaDB
+#           baseurl = http://yum.mariadb.org/10.1/centos7-amd64
+#           gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+#           gpgcheck=1" >  /etc/yum.repos.d/MariaDB.repo
           
         
-- name: Install mariadb database
-  yum: 
-    name: ["MariaDB-server", "MariaDB-client"]
-    state: present
+# - name: Install mariadb database
+#   yum: 
+#     name: ["MariaDB-server", "MariaDB-client"]
+#     state: present
 
-- name: start mariadb service
-  service: 
-    name:  mariadb
-    state: started
-    enabled: yes
+# - name: start mariadb service
+#   service: 
+#     name:  mariadb
+#     state: started
+#     enabled: yes
 
-- name: create application database
-  mysql_db: 
-    name: "{{ db_name }}" 
-    state: present
+# - name: create application database
+#   mysql_db: 
+#     name: "{{ db_name }}" 
+#     state: present
     
-- name: create database user
-  mysql_user:
-    name: "{{ db_user }}"
-    password: "{{ db_password }}"
-    priv: '*.*:ALL'
-    state: present
-    host: '%'
+# - name: create database user
+#   mysql_user:
+#     name: "{{ db_user }}"
+#     password: "{{ db_password }}"
+#     priv: '*.*:ALL'
+#     state: present
+#     host: '%'
