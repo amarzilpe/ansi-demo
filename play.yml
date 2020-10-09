@@ -1,2 +1,14 @@
--
-        name: web server installation
+- name: web server installation
+  hosts: web-server
+  become: yes
+  become_method: sudo
+  role: 
+      - web.yml
+
+- name: Database server installation
+  hosts: database-server
+  become: yes
+  become_method: sudo
+  role: 
+      - db.yml
+              
