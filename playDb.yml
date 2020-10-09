@@ -1,0 +1,6 @@
+- name: Database server installation
+  hosts: database-server
+  become: yes
+  become_method: sudo
+  role: 
+      - db.yml
