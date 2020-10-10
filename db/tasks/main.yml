@@ -1,9 +1,11 @@
 ---
 # tasks file for db.yml
 - name: Update all dependency packages
-  shell: sudo yum update -y
-  async: 180
-  poll: 60
+  yum: 
+    name: '*'
+    state: latest
+    async: 120
+    poll: 60
 
 # - name: installation of mariadb database server
 #   shell: echo 
