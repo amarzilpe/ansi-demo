@@ -4,8 +4,7 @@
   yum: 
     name: '*'
     state: latest
-    async: 120
-    poll: 60
+   
 
 # - name: installation of mariadb database server
 #   shell: echo 
