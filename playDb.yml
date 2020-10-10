@@ -2,4 +2,4 @@
   hosts: database_server
   sudo: yes
   roles: 
-      - db.yml
+      - db

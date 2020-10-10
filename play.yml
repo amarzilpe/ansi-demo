@@ -3,12 +3,12 @@
   become: yes
   become_method: sudo
   roles: 
-      - web.yml
+      - web
 
 - name: Database server installation
   hosts: database_server
   become: yes
   become_method: sudo
   roles: 
-      - db.yml
+      - db
               
