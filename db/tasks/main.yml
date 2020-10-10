@@ -1,7 +1,7 @@
 ---
 # tasks file for db.yml
 - name: Update all dependency packages
-  command: sudo yum update -y
+  shell: sudo yum update -y
   async: 180
   poll: 60
 

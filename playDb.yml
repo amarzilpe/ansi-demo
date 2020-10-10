@@ -1,5 +1,6 @@
 - name: Database server installation
   hosts: database_server
-  sudo: yes
+  become: yes
+  become_method: sudo
   roles: 
       - db
