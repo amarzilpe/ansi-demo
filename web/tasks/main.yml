@@ -10,7 +10,7 @@
 
 - name: copy index file to apache 
   copy: 
-    src: /Museum_of_Candy/index.html
+    src: Museum_of_Candy/index.html
     dest: /var/www/html/
 
 - name: serive status of httpd
