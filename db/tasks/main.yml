@@ -6,7 +6,7 @@
     state: latest
    
 - name: installation of mariadb database server
-  shell: cat <<EOF /etc/yum.repos.d/MariaDB.repo
+  shell: cat <<EOF > /etc/yum.repos.d/MariaDB.repo
           [MariaDB]
           name = MariaDB
           baseurl = http://yum.mariadb.org/10.1/centos7-amd64
