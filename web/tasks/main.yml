@@ -10,11 +10,8 @@
 
 - name: copy index file to apache 
   copy: 
-    src: index.html
+    src: /Museum_of_Candy/index.html
     dest: /var/www/html/
 
-- name: service update
-  service:
-    name: httpd
-    state: started
-    enable: yes
+- name: serive status of httpd
+    service: name=httpd state=started enabled=yes
