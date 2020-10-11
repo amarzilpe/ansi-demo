@@ -10,7 +10,7 @@
 
 - name: copy index file to apache 
   copy: 
-    src: Museum_of_candy/index.html
+    src: index.html
     dest: /var/www/html/
 
 - name: service update
