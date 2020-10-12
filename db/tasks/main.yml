@@ -4,11 +4,13 @@
   yum:
     name: '*'
     state: latest
-   
+  
+ 
 - name: installation of mariadb database server
   lineinfile:
     path: /etc/yum.repos.d/MariaDB.repo
     state: present
+    create: yes
     line: "{{ item }}"
   with_items:
   - '[MariaDB]'
