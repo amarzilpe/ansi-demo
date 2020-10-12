@@ -33,13 +33,13 @@
 
 - name: create application database
   community.mysql.mysql_user: 
-    name: "{{ db_name }}" 
-    state: present
+      name: "{{ db_name }}" 
+      state: present
     
 - name: create database user
   community.mysql.mysql_user:
-    name: "{{ db_user }}"
-    password: "{{ db_password }}"
-    priv: '*.*:ALL'
-    state: present
-    host: '%'
+      name: "{{ db_user }}"
+      password: "{{ db_password }}"
+      priv: '*.*:ALL'
+      state: present
+      host: '%'
