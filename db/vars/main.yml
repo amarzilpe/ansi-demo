@@ -1,5 +1,5 @@
 ---
 # vars file for db.yml
-db_user: redhat
+db_user: root
 db_name: sample-db
-db_password: Passw@rd
+db_password: redhat
