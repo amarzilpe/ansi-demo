@@ -1,4 +1,4 @@
-hosts: database_server
+hosts: 172.31.11.118
 become: yes
 become_method: sudo
 tasks:
@@ -10,7 +10,7 @@ tasks:
       baseurl: http://yum.mariadb.org/10.3/centos7-amd64
       gpgcheck: yes
       gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-      
+
   - name: install package maraiadb-server and mariadb-client
     yum:
       - mariadb-client
